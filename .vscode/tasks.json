@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Flappy Bird (OOP)",
+            "type": "shell",
+            
+            "command": "E:/C++_setup/C++/ucrt64/bin/g++.exe",
+
+            "args": [
+                "-std=c++17",
+                "-g",
+                
+                // --- INI ADALAH PERBAIKANNYA ---
+                // Kita harus build SEMUA file .cpp
+                "main.cpp",
+                "Game.cpp",
+                "Bird.cpp",
+                "Pipe.cpp",
+                "Score.cpp",
+                // ---------------------------------
+
+                "-o",
+                "flappy_bird.exe",
+                
+                // Path Include
+                "-I", "E:/C++_setup/FlappyBird/lib/SFML-3.0.2/include",
+                
+                // Path Library
+                "-L", "E:/C++_setup/FlappyBird/lib/SFML-3.0.2/lib",
+                
+                // Linker Library SFML 3 (debug)
+                "-lsfml-graphics-d",
+                "-lsfml-window-d",
+                "-lsfml-system-d",
+                "-lsfml-audio-d",
+
+                // Dependensi SFML 3
+                "-lopengl32",
+                "-lfreetype",
+                "-lgdi32",
+                "-lwinmm",
+                "-lws2_32",
+                "-lole32",
+                "-luuid"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

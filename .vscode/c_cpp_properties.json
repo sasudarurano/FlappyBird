@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Win64",
+
+            // Path untuk IntelliSense mencari header file
+            "includePath": [
+                "${workspaceFolder}/**",
+                "E:/C++_setup/FlappyBird/lib/SFML-3.0.2/include" // <-- pastikan path ini benar
+            ],
+
+            // Macro definisi (bisa digunakan untuk mode debug, Unicode, dll.)
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+
+            // Tidak wajib, tapi bisa disesuaikan jika kamu menggunakan Windows SDK
+            "windowsSdkVersion": "10.0.22621.0",
+
+            // ⚠️ PERBAIKAN UTAMA: tambahkan slash setelah 'E:'
+            // Sebelumnya:  "E:C++_setup/..."
+            // Harusnya:   "E:/C++_setup/..."
+            "compilerPath": "E:/C++_setup/C++/ucrt64/bin/g++.exe",
+
+            // Standar C dan C++ yang digunakan
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+
+            // IntelliSense menggunakan GCC mode untuk Windows 64-bit
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
